@@ -1,23 +1,27 @@
 import logo from './logo.svg';
 import './App.css';
+import MotorController from './MotorController';
+import Axios from 'axios'
 
 function App() {
+
+  const getData = () => {
+    Axios.get("http://localhost:4000/MotorData").then((response) => {
+      console.log(response.data.leftMotor.RPM)
+    })
+  }
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <MotorController Motor="Left" />
+      <MotorController Motor="Right" />
+      <hr></hr>
+      <div>
+        <h1>Battery Management System (BMS)</h1>
+        <h2>Battery Current</h2>
+        <h2>Battery Voltage</h2>
+      </div>
+      <button onClick={getData}>hello</button>
     </div>
   );
 }
