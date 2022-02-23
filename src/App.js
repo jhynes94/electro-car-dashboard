@@ -1,7 +1,8 @@
 import { useState, useEffect } from 'react'
 import './App.css';
-import MotorController from './components/MotorController';
 import Axios from 'axios'
+import MotorController from './components/MotorController';
+import BMS from './components/BMS'
 
 function App() {
 
@@ -52,11 +53,7 @@ function App() {
       <MotorController Motor="Left" data={motorData.leftMotor} />
       <MotorController Motor="Right" data={motorData.rightMotor} />
       <hr></hr>
-      <div>
-        <h1>Battery Management System (BMS)</h1>
-        <h2>Battery Current {battData.batteryCurrent}</h2>
-        <h2>Battery Voltage {battData.batteryVoltage}</h2>
-      </div>
+      <BMS Data={battData} />
     </div>
   );
 }
