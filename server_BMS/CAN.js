@@ -1,3 +1,4 @@
+//https://serialport.io/docs/api-parsers-overview
 const { SerialPort } = require('serialport')
 const { ReadlineParser } = require('@serialport/parser-readline')
 const port = new SerialPort({ path: 'COM4', baudRate: 921600 })
