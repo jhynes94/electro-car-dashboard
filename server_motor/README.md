@@ -2,6 +2,8 @@
 
 Register map for devices
 
+https://python-can.readthedocs.io/
+
 | Item          | Address | Value |
 |---------------|---------|-------|
 | RPM           | 0x10    | 0-255 |
