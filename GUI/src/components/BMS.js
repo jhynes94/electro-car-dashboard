@@ -5,6 +5,7 @@ const BMS = ({ Data }) => {
                 <h1>Battery Management System (BMS)</h1>
                 <h2>Battery Current {Data.batteryCurrent}</h2>
                 <h2>Battery Voltage {Data.batteryVoltage}</h2>
+                <h2>Pack Current: No valid</h2>
             </div>
         </div>
     );
